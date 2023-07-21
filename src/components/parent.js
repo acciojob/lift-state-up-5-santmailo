@@ -11,7 +11,11 @@ const Parent = () => {
     return (
         <div>
             {
-                isLoggedIn ? <p>You are logged in!</p> : <Child handleLogin={handleLogin}/>
+                !isLoggedIn && <h1>Parent Component</h1>
+            }
+            {
+                isLoggedIn ? <p>You are logged in!</p> :
+                <Child handleLogin={handleLogin}/>
             }
         </div>
     )
